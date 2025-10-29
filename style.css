@@ -1,0 +1,454 @@
+/* Reset - removes default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+    
+ body{
+    background: #f7f8fa;
+    color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 100;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.brand {
+    font-weight: 700;
+    color: darkslategray;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: rgb(255, 68, 0);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 80px 40px;
+    min-height: 100vh;
+    background: url("pic/white.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.intro {
+    font-size: 24px;
+    color: #555;
+}
+
+.title {
+    font-size: 64px;
+    color: #222;
+    margin: 15px 0;
+}
+
+.hero-content span {
+    color: rgb(255, 68, 0);
+}
+
+.desc {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgb(255, 68, 0);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(255, 68, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: darkslategray;
+    transform: translateY(-3px);
+}
+
+.hero-img img {
+    width: 420px;
+    border-radius: 20px;
+    animation: float 4s ease-in-out infinite;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.footer .socials {
+    margin-bottom: 15px;
+}
+
+.footer ion-icon {
+    font-size: 26px;
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer ion-icon:hover {
+    color: rgb(255, 68, 0);
+}
+
+.footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* RESPONSIVE - for phones */
+@media (max-width: 900px) {
+.hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 40px;
+}
+
+.hero-img img {
+    width: 280px;
+    margin-top: 30px;
+}
+
+.nav-links {
+    display: none;
+}
+}
+
+/* ABOUT PAGE */
+body.about-page {
+    background: linear-gradient(135deg, #f7f8fa, #e3f2fd);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    color: #222;
+}
+
+.about-page h1 {
+    font-size: 50px;
+    color: rgb(255, 68, 0);
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.about-page h2 {
+    font-size: 30px;
+    color: darkslategray;
+    margin-bottom: 10px;
+}
+
+.about-page h3 {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 10px;
+    animation: slideUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.back-btn {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 12px 25px;
+    background: rgb(255, 68, 0);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.back-btn:hover {
+    background: darkslategray;
+}
+/* CONTACT PAGE STYLE */
+body.contact-page {
+  background: linear-gradient(135deg, #f6f9ff, #ffffff);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.contact-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease;
+  max-width: 500px;
+}
+
+.contact-container h1 {
+  font-size: 42px;
+  color: rgb(255, 68, 0);
+  margin-bottom: 20px;
+}
+
+.contact-container h3 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.contact-container p {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.contact-container p strong {
+  color: rgb(255, 68, 0);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background: rgb(255, 68, 0);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: darkslategray;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SPONSOR PAGE */
+body.sponsor-page {
+    background: linear-gradient(135deg, #fff7e6, #ffe0b2);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px;
+}
+
+.sponsor-page h1 {
+    font-size: 48px;
+    color: rgb(255, 68, 0);
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.sponsor-page h3, .sponsor-page h4 {
+    font-size: 22px;
+    color: darkslategray;
+    margin: 10px 0;
+    line-height: 1.6;
+    animation: slideUp 1s ease;
+}
+
+.sponsor-page .btn {
+    margin-top: 30px;
+    background: rgb(255, 68, 0);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.sponsor-page .btn:hover {
+    background: darkslategray;
+}
+
+/* STORY PAGE */
+body.story-page {
+    background: linear-gradient(135deg, #f0f9ff, #d6eaff);
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.story-page h1 {
+    font-size: 48px;
+    color: rgb(255, 68, 0);
+    margin-bottom: 25px;
+    animation: fadeIn 1.5s ease;
+}
+
+.story-page h3,
+.story-page h4 {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+    animation: slideUp 1s ease;
+}
+
+.story-page .btn {
+    margin-top: 30px;
+    background: rgb(255, 68, 0);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.story-page .btn:hover {
+    background: darkslategray;
+}
+
+/* SKILLS PAGE */
+body.skills-page {
+    background: linear-gradient(135deg, #fff8f0, #ffe9d6);
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skills-page h1 {
+    font-size: 48px;
+    color: rgb(255, 68, 0);
+    margin-bottom: 25px;
+    animation: fadeIn 1.5s ease;
+}
+
+.skills-page h3 {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+    animation: slideUp 1s ease;
+}
+
+.skills-page .btn {
+    margin-top: 30px;
+    background: rgb(255, 68, 0);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.skills-page .btn:hover {
+    background: darkslategray;
+}
+
